@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Image from "next/image"
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className='max-w-6xl mx-auto h-28 flex justify-center md:justify-start items-center gap-4'><span><Image src="/images/veggie-carbonara.jpg" width="50" height="50" alt='logo' className='rounded-full'/></span><h1 className=' text-4xl font-bold'>Meraj's Recipes</h1></nav>
+        {children}</body>
     </html>
   )
 }
